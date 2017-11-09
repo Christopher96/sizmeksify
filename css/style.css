@@ -1,0 +1,67 @@
+
+input[type=file] {
+    border: 1px solid;
+    padding: 1em;
+	font-size: 1em;
+}
+
+#sizmeksify {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+    border-bottom: 1px solid;
+	border-top: 1px solid;
+}
+
+#sizmeksify label {
+	text-align: center;
+}
+
+#sizmeksify .pure-g {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sizmeksify button {
+	width: 100%;
+}
+
+#file_info {
+	display: none;
+	margin-top: 50px;
+}
+
+#file_name {
+	text-align: center;
+}
+
+.container {
+	max-width: 900px;
+	padding-top: 50px;
+	padding-bottom: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alerts-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.alerts-container .title {
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;	
+}
+
+.alert {
+	margin-bottom: 1em;
+	border-radius: .5em;
+	border:1px solid;
+	padding: .5em 1em;
+}
+
+.alert-img{
+	height: 23px;
+}

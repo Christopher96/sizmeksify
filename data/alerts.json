@@ -1,0 +1,37 @@
+{
+    "document": {
+        "success": "HTML Document was found in the root of the workspace.",
+        "error": "HTML Document was not found in the root of the workspace.",
+        "warning": "Multiple HTML documents was found in the root of the workspace",
+        "link": "https://support.sizmek.com/hc/en-us/articles/200722459--video-overview-HTML5-Workspaces"
+    },
+    "library": {
+        "success": [
+            "Adkit library script reference was found.",
+            "EBLoader library script reference was found."
+        ],
+        "error": "Adkit/EBLoader library script reference was not found.",
+        "link": "https://support.sizmek.com/hc/en-us/articles/205003595--sub-howto-Add-the-Creative-Adkit-Declaration-to-the-Index-html-File"
+    },
+    "clickthrough": {
+        "success": "Clickthrough function was found.",
+        "error": "Clickthrough function was not found.",
+        "link": "https://support.sizmek.com/hc/en-us/articles/201128145--reference-glossary-Sizmek-HTML5-API#Clickthrough()"
+    },
+    "initialize": {
+        "success": [
+            "Adkit onReady function was found.",
+            "EBLoader initialization listener found."
+        ],
+        "error": "Adkit/EBLoader initialization function was not found.",
+        "link": "https://support.sizmek.com/hc/en-us/articles/205003595--sub-howto-Add-the-Creative-Adkit-Declaration-to-the-Index-html-File"
+    },
+    "fallback": {
+        "success": [
+            "Fallback image was found.",
+            "Mutliple potential fallback images was found."   
+        ],
+        "error": "No fallback image present in the creative matching the given dimensions.",
+        "link": "https://support.sizmek.com/hc/en-us/articles/205003595--sub-howto-Add-the-Creative-Adkit-Declaration-to-the-Index-html-File"
+    }
+}
