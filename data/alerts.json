@@ -24,7 +24,7 @@
             "EBLoader initialization listener found."
         ],
         "error": "Adkit/EBLoader initialization function was not found.",
-        "link": "https://support.sizmek.com/hc/en-us/articles/205003595--sub-howto-Add-the-Creative-Adkit-Declaration-to-the-Index-html-File"
+        "link": "https://support.sizmek.com/hc/en-us/articles/201128145--reference-glossary-Sizmek-HTML5-API#isInitialized()"
     },
     "fallback": {
         "success": [
@@ -32,6 +32,6 @@
             "Mutliple potential fallback images was found."   
         ],
         "error": "No fallback image present in the creative matching the given dimensions.",
-        "link": "https://support.sizmek.com/hc/en-us/articles/205003595--sub-howto-Add-the-Creative-Adkit-Declaration-to-the-Index-html-File"
+        "link": "https://support.sizmek.com/hc/en-us/articles/200722459--video-overview-HTML5-Workspaces"
     }
 }

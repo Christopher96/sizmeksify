@@ -3,7 +3,6 @@ var checks_json;
 var fade_time = 500;
 
 $(document).ready(function(){
-
     $.ajax({
         url: "data/alerts.json", 
         method: "GET",
@@ -14,7 +13,15 @@ $(document).ready(function(){
                 e.preventDefault();
         
                 var fd = new FormData(this);
-        
+
+                var submit = $(this).find("[type=submit]");
+                var submitTxt = submit.text();
+                submit.text("Validating...");
+                submit.prop("disabled", true);
+
+                var loader = $(this).find(".loader");
+                loader.show();
+
                 $.ajax({
                     url: 'php/read.php',
                     data: fd,
@@ -25,13 +32,19 @@ $(document).ready(function(){
                         printAlerts(data);
                     },
                     complete: function(res) {
-                        console.log(res.responseText);
+                        submit.text(submitTxt);
+                        submit.prop("disabled", false);
+                        loader.hide();
                     }
                 });
             });
         }
     });
 });
+
+function validate(formdata) {
+    
+}
 
 function printAlerts(data) {
     try {

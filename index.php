@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Sizmeksify</title>
+	<link rel="icon" type="image/png" href="../favicon.png">
 	<script src="../global/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../global/pure-min.css">
 	<link rel="stylesheet" type="text/css" href="../global/style.css">
@@ -41,8 +42,9 @@
 			</div>
 		</div>
 		<div class="pure-g">
-			<button class="pure-button pure-button-primary">Validate Workspace</button>
+			<button type="submit" class="pure-button pure-button-primary">Validate Workspace</button>
 		</div>
+		<div class="loader">Loading...</div>
 	</form>
 	<div id="file_info">
 		<h2 id="file_name"></h2>
