@@ -56,12 +56,14 @@ input[type=file] {
 }
 
 .alert {
+	display: none;
 	margin-bottom: 1em;
 	border-radius: .5em;
 	border:1px solid;
-	padding: .5em 1em;
+	padding: 1.5em;
 }
 
-.alert-img{
-	height: 23px;
+.alert .icon {
+	font-size: 1.5em;
+	padding-top: 5px;
 }

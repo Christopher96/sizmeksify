@@ -32,6 +32,7 @@ $(document).ready(function(){
                         printAlerts(data);
                     },
                     complete: function(res) {
+                        console.log(res.responseText);
                         submit.text(submitTxt);
                         submit.prop("disabled", false);
                         loader.hide();
@@ -113,12 +114,17 @@ function newAlert( isError, title, info ){
 
             alert.addClass((isError) ? "error" : "success");
             var container = (isError) ? $("#errors") : $("#checks");
-            var img = (isError) ? "error.png" : "check.png";
+            var iconclass = (isError) ? "times-circle" : "check-circle";
             
             container.append( alert );
 
-            alert.find(".alert-img").attr( "src", "img/" + img );
-            alert.find(".alert-txt").html( "<span class='bold'>"+title+"</span><br/><span>"+info+"</span>" );
+            alert.find(".icon")
+                .removeClass("fa-times-circle")
+                .removeClass("fa-check-circle")
+                .addClass("fa-"+iconclass);
+            alert.find(".text").html( "<span class='bold'>"+title+"</span><br/><span class='light'>"+info+"</span>" );
+
+            alert.fadeIn( fade_time );
         }
     });
 }
@@ -153,7 +159,7 @@ function handleChecks(checks) {
                     info =  "Path: " + values.path;
                 break;
                 case "library":
-                    info =  "Source: " + values.source + "<br/>" + "Type: " + values.type;
+                    info =  "Source: " + values.source + "<br/>" + "Protocol: " + values.protocol;
                 break;
                 case "clickthrough":
                 case "initialize":
@@ -171,7 +177,7 @@ function handleChecks(checks) {
             switch(check_name) {
                 case "library":
                 case "initialize":
-                    title = (values.library == "adkit.js") ? check.success[0] : check.success[1];
+                    title = (values.type == "Adkit") ? check.success[0] : check.success[1];
                 break;
                 case "fallback":
                     title = (values.images.length > 1) ? check.success[1] : check.success[0];
@@ -192,13 +198,13 @@ function handleChecks(checks) {
     }
 
     if( success_checks > 0 ){
-        checks_container.fadeIn( fade_time );
+        checks_container.show();
     } else {
         checks_container.hide();
     }
 
     if( success_checks < total_checks ){
-        errors_container.fadeIn( fade_time );
+        errors_container.show();
     } else {
         errors_container.hide();
     }

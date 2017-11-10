@@ -271,18 +271,23 @@ function scanHTMLForLibrary( $html ){
 
 				if( $library == "adkit.js" || $library == "EBLoader.js" ){
 
-					$type = "Local";
+					$protocol = "Local";
 
 					if( isset( $urlobj['scheme'] ) ){
 						if( $urlobj['host'] == "secure-ds.serving-sys.com" && $urlobj['scheme'] === "https" ){
-							$type = "Secure External ( HTTPS )";
+							$protocol = "Secure External ( HTTPS )";
 						} else {
 
-						 	$type = "Unsecure External ( HTTP )";
+						 	$protocol = "Unsecure External ( HTTP )";
 						}
 					}
 
-					$checks['library'] = array( "type" => $type, "library" => $library, "source" => $source );
+					$checks['library'] = array( 
+						"protocol" => $protocol, 
+						"library" => $library, 
+						"source" => $source,
+						"type" => ($library == "adkit.js") ? "Adkit" : "EBLoader"
+					);
 				}
 			}
 		}

@@ -3,9 +3,10 @@
 <head>
 	<title>Sizmeksify</title>
 	<link rel="icon" type="image/png" href="../favicon.png">
-	<script src="../global/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../global/pure-min.css">
-	<link rel="stylesheet" type="text/css" href="../global/style.css">
+	<script src="../global/js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../global/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../global/css/pure-css.min.css">
+	<link rel="stylesheet" type="text/css" href="../global/css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
